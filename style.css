@@ -1,0 +1,41 @@
+p {
+    color: green;
+}
+
+.title {
+    color: green;
+    font-size: xx-large;
+    font-family: Garamond, Times New Roman, serif;
+    font-style: italic;
+
+}
+
+.top {
+    background-color: aliceblue;
+}
+
+.line {
+    background-color: rgb(0, 0, 0);
+}
+
+div.header {
+    background-color: turquoise;
+}
+
+.link {
+    color: red;
+}
+
+span.header#word {
+    background-color: rgb(195, 223, 248);
+}
+
+hr {
+    background-color: rgb(0, 26, 255);
+    height: 1px;
+    border: 0;
+}
+
+#laugh {
+    background-color: yellow;
+}
