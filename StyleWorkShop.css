@@ -1,0 +1,37 @@
+p {
+    color: green;
+}
+
+.title {
+    color: green;
+    font-size: xx-large;
+    font-family: Garamond, Times New Roman, serif;
+    font-style: italic;
+
+}
+
+.top {
+    background-color: rgb(119, 231, 128);
+}
+
+.line {
+    background-color: rgb(0, 0, 0);
+}
+
+.coldword {
+    background-color: rgb(195, 223, 248);
+}
+
+.link {
+    color: red;
+}
+
+hr {
+    background-color: rgb(0, 26, 255);
+    height: 0px;
+    border: 0;
+}
+
+.laugh {
+    background-color: yellow;
+}

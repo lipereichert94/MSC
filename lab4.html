@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>About me</title>
+    <link href="StyleWorkShop.css" type="text/css" rel="stylesheet">
+    <style>
+        .our-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: left;
+
+        }
+
+        .buttonfoot {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 20px;
+            background-color: gray;
+            justify-content: right;
+            padding-right: 720px;
+            
+
+        }
+
+        .buttonfoot button#Submit {
+            background-color: rgb(119, 231, 128);
+            border-radius: 1px;
+        }
+
+        .buttonfoot button#Reset {
+            border-radius: 1px;
+            background-color: rgb(119, 231, 128);
+
+        }
+
+        h4 {
+            padding-top: 5px;
+            padding-left: 30px;
+        }
+
+        .arrow {
+            padding-top: 20px;
+            padding-left: 10px;
+        }
+
+        .SectionForm {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            border: 2px solid rgb(217, 255, 0);
+            border-radius: 5px;
+            background-color: white;
+            
+
+        }
+
+        .SectionFormLeft {
+            width: auto;
+            height: auto;
+            background-color: white;
+        }
+
+        .SectionFormRight {
+            width: auto;
+            height: auto;
+            background-color: white;
+        }
+
+        .HTMLChecker {
+            padding-top: 50px;
+        }
+
+        .mandatory {
+            color: red;
+        }
+
+        .HeaderFormTextStyle {
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .PreferenceMeal {
+            font-weight: bold;
+        }
+
+        input,select,textarea{
+            width: 16vw;
+        }
+        input[type="checkbox"]{
+            width: 2vw;
+        }
+        .paymentmode{
+            display: flex;
+            flex-direction: column;
+        }
+        table td{
+            padding-top: 10px;
+            
+        }
+        body{
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <hr class="line">
+        <div class="our-container">
+            <div class="our-container">
+                <h2>Workshop Registration </h2>
+                <h4>More Actions</h4>
+                <div class="arrow">
+                    <img src="arrowdown.png" width="8" height="8">
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="SectionForm">
+
+            <div class="SectionFormLeft">
+                <span class="HeaderFormTextStyle">Register now while seats are available</span>
+
+                <table>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>First Name <span class="mandatory">*</span></td>
+                        <td><input type="text" name="firstname" /></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name <span class="mandatory">*</span></td>
+                        <td><input type="text" name="lastname" /></td>
+                    </tr>
+                    <tr>
+                        <td>Company Institution <span class="mandatory">*</span></td>
+                        <td><input type="text" name="lastname" /></td>
+                    </tr>
+                    <tr>
+                        <td>Address <span class="mandatory">*</span></td>
+                        <td><textarea rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td><input type="text" name="lastname" /></td>
+                    </tr>
+                    <tr>
+                        <td>State / Province / Region</td>
+                        <td><select name="favoritecharacter">
+                                <option>- Select -</option>
+                                <option>George</option>
+                                <option>Kramer</option>
+                                <option>Elaine</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td><select name="favoritecharacter">
+                                <option>- Select -</option>
+                                <option>George</option>
+                                <option>Kramer</option>
+                                <option>Elaine</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Email<span class="mandatory">*</span></td>
+                        <td><input type="text" name="lastname" /></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number<span class="mandatory">*</span></td>
+                        <td><input type="text" name="lastname" /></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="SectionFormRight">
+                <span class="HeaderFormTextStyle">Lunch</span>
+
+                <table>
+                    <tr>
+                        <td><span class="PreferenceMeal"> Preference</span></td>
+                        <td><select name="favoritecharacter">
+                                <option>- Vegetarian -</option>
+                                <option>George</option>
+                                <option>Kramer</option>
+                                <option>Elaine</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td><select name="favoritecharacter">
+                                <option>- Select -</option>
+                                <option>George</option>
+                                <option>Kramer</option>
+                                <option>Elaine</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Email<span class="mandatory">*</span></td>
+                        <td><input type="text" name="lastname" /></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number<span class="mandatory">*</span></td>
+                        <td><input type="text" name="lastname" /></td>
+                    </tr>
+                    <tr>
+                        <td><span class="HeaderFormTextStyle">Payment Details</span></td>
+                    </tr>
+                    <tr>
+                        <td>Payment Mode</td>
+                        <td class="paymentmode"> <label for="check"> <input type="checkbox" name="tomato" id="check" /> Check</label>
+                            <label for="demanddraft"><input type="checkbox" name="pickles" id="demanddraft" /> Demand
+                                Draft</label>
+                            <label for="cash"><input type="checkbox" name="lettuce" id="cash" /> Cash</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DD/Cheque No.<span class="mandatory">*</span></td>
+                        <td><input type="text" name="lastname" /></td>
+                    </tr>
+                    <tr>
+                        <td>Drawn On(Bank Name)<span class="mandatory">*</span></td>
+                        <td><input type="text" name="lastname" /></td>
+                    </tr>
+                    <tr>
+                        <td>Payable at<span class="mandatory">*</span></td>
+                        <td><input type="text" name="lastname" /></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="buttonfoot">
+            <button id="Submit">Submit</button>
+            <button id="Reset">Reset</button>
+        </div>
+        <div class="HTMLChecker">
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Flipereichert94.github.io%2FMSC%2Flab3.html">
+                <img src="htmlchecker.png" alt="Validate" width="180" height="55" />
+            </a>
+            <a
+                href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flipereichert94.github.io%2FMSC%2Flab3.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">
+                <img src="css_checker.png   " alt="Validate" width="180" height="55" />
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
