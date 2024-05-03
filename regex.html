@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>About me</title>
+    <link href="StyleWorkShop.css" type="text/css" rel="stylesheet">
+    <style>
+        .our-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: left;
+
+        }
+
+        .buttonfoot {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 20px;
+            background-color: gray;
+            justify-content: right;
+            padding-right: 720px;
+
+
+        }
+
+        .buttonfoot button#Submit {
+            background-color: rgb(119, 231, 128);
+            border-radius: 1px;
+        }
+
+        .buttonfoot button#Reset {
+            border-radius: 1px;
+            background-color: rgb(119, 231, 128);
+
+        }
+
+        h4 {
+            padding-top: 5px;
+            padding-left: 30px;
+        }
+
+        .arrow {
+            padding-top: 20px;
+            padding-left: 10px;
+        }
+
+        .SectionForm {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            border: 2px solid rgb(217, 255, 0);
+            border-radius: 5px;
+            background-color: white;
+
+
+        }
+
+        .SectionFormLeft {
+            width: auto;
+            height: auto;
+            background-color: white;
+        }
+
+        .SectionFormRight {
+            width: auto;
+            height: auto;
+            background-color: white;
+        }
+
+        .HTMLChecker {
+            padding-top: 50px;
+        }
+
+        .mandatory {
+            color: red;
+        }
+
+        .HeaderFormTextStyle {
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .PreferenceMeal {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 16vw;
+        }
+
+        input[type="checkbox"] {
+            width: 2vw;
+        }
+
+        .paymentmode {
+            display: flex;
+            flex-direction: column;
+        }
+
+        table td {
+            padding-top: 10px;
+
+        }
+
+        body {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="demo_form.jsp">
+        Country code:
+        <input type="text" name="country_code" pattern="\$[1-9]\d{2,}\.\d{2}" title=" Three letter country code ">
+        <input type="submit">
+    </form>
+</body>
+
+</html>
