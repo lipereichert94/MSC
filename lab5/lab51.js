@@ -105,3 +105,25 @@ console.log(students.filter(x => x.courses.includes('cs303')).map(x => {
     return xyz;
 }));
 
+console.log(students.filter(x => x.courses.includes('cs303')).map(x => {
+    let xyz = {};
+    xyz[x.name] = x.grades.reduce((accum, current, index, array) => accum + current / array.length, 0)
+    return xyz;
+}));
+
+//Method 1 using map and external variable
+var ex4 = {};
+students.filter(x => x.courses.includes('cs303')).map(x => {
+    ex4[x.name] = x.grades.reduce((accum, current, index, array) => accum + current / array.length, 0);
+})
+console.log(ex4);
+
+ex4 = {};
+
+//Method 2 using reduce and annonymus class
+console.log(students.filter(x => x.courses.includes('cs303')).reduce((x, y) => {
+
+    x[y.name] = y.grades.reduce((accum, current, index, array) => accum + current / array.length, 0);
+    return x;
+}, {}));
+
