@@ -12,25 +12,25 @@
 
 
 //Solution 1
-let group = {
+// let group = {
 
-    title: "Our Group",
+//     title: "Our Group",
 
-    students: ["John", "Pete", "Alice"],
-    showList: function () {
-        console.log(this)
-        this.students.forEach((student) => {
-            console.log(this.title + ": " + student);
-        });
-    }
+//     students: ["John", "Pete", "Alice"],
+//     showList: function () {
+//         console.log(this)
+//         this.students.forEach((student) => {
+//             console.log(this.title + ": " + student);
+//         });
+//     }
 
-};
+// };
 
-group.showList();
+// group.showList();
 
 
 
-// //Solution 2
+// // //Solution 2
 // let group = {
 
 //     title: "Our Group",
@@ -38,15 +38,32 @@ group.showList();
 //     students: ["John", "Pete", "Alice"],
 
 //     sayHi() {
-//         this.students.forEach((student) => {
+//         this.students.forEach(function (student){
 //             console.log(this.title + " " + student);
-//         })
+//         }.bind(this));
 //     }
 
 // };
 
 // group.sayHi();
 
+// //Solution 3
+// let group = {
+
+//     title: "Our Group",
+
+//     students: ["John", "Pete", "Alice"],
+
+//     sayHi() {
+//         const self = this;
+//         this.students.forEach(function (student){
+//             console.log(self.title + " " + student);
+//         }.bind(this));
+//     }
+
+// };
+
+// group.sayHi();
 
 // // //Solution 4
 // let group = {
@@ -72,8 +89,51 @@ group.showList();
 // group.showList();
 
 
+// // // //Solution 5
+// let group = {
 
+//     title: "Our Group",
 
+//     students: ["John", "Pete", "Alice"],
+
+//     showList: function () {
+
+//         this.students.forEach(function (student) {
+
+//             console.log(group.title + ": " + student
+
+//             );
+
+//         },this);
+
+//     }
+
+// };
+
+// group.showList();
+
+// // //Solution 6
+let group = {
+
+    title: "Our Group",
+
+    students: ["John", "Pete", "Alice"],
+
+    showList: function () {
+
+        this.students.forEach((stu) => function (student) {
+
+            console.log(group.title + ": " + student
+
+            );
+
+        }.call(this, stu));
+
+    }
+
+};
+
+group.showList();
 
 
 
@@ -92,11 +152,11 @@ group.showList();
 
 // assume that the time to execute this function is >100ms
 
-for(let j = 0; j < 100000000; j++) {
-if(j==99999999){
-    console.log('heavy calculation')
-}
-  //i++;
+for (let j = 0; j < 100000000; j++) {
+    if (j == 99999999) {
+        console.log('heavy calculation')
+    }
+    //i++;
 
 }
 console.log('after loop');
