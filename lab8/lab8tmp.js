@@ -1,33 +1,29 @@
-let a =
-    1
-    ;
-let b =
-    2
-    ;
-function foo() {
-    let a =
-        3
-        ;
-    let b =
-        4
-        ;
-    bar(a);
-    console.log(a, b);
-    function baz(arg1, arg2, arg3) {
-        console.log(arg1, arg2, arg3);
-        b = arg1 + arg2;
-        a = arg1 + arg2;
+let o = {
+    name: `abc`,
+    printmessage: function () {
+    
+        //console.log(console.log(this.name));
+
+        // setTimeout(() => {
+        //     console.log(this.name);
+        // }, 2000);
+        
+        
+        //annonymus function doesn't have a name, the bind is a reference for a function passing the context (in this case the object o)
+        setTimeout(function () { console.log(this.name) }.bind(this), 2000);
+        
+
+        //wrap with arrow function and apply
+        setTimeout(()=>function () { console.log(this.name) }.apply(this), 2000);
+
+        //wrap with arrow function and call
+        setTimeout(()=>function(){console.log(this.name)}.call(this));
+
     }
-    const f = () => { console.log(a, b) };
-    baz
-        (
-            5, 10, f, 40, 50);
-    console.log(a, b);
 }
-function bar(arg1, arg2) {
-    console.log(arg1, arg2);
-    a = arg1 + 40
-        ;
-}
-foo();
-console.log(a, b);
+
+//setTimeout(() => o.printmessage(o), 3000);
+//setTimeout(o.printmessage.bind(o), 2000);
+
+
+o.printmessage();
