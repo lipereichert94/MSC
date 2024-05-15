@@ -48,22 +48,22 @@
 // group.sayHi();
 
 // //Solution 3
-// let group = {
+let group = {
 
-//     title: "Our Group",
+    title: "Our Group",
 
-//     students: ["John", "Pete", "Alice"],
+    students: ["John", "Pete", "Alice"],
 
-//     sayHi() {
-//         const self = this;
-//         this.students.forEach(function (student){
-//             console.log(self.title + " " + student);
-//         }.bind(this));
-//     }
+    sayHi() {
+        const self = this;
+        this.students.forEach(function (student){
+            console.log(self.title + " " + student);
+        });
+    }
 
-// };
+};
 
-// group.sayHi();
+group.sayHi();
 
 // // //Solution 4
 // let group = {
@@ -113,27 +113,27 @@
 // group.showList();
 
 // // //Solution 6
-let group = {
+// let group = {
 
-    title: "Our Group",
+//     title: "Our Group",
 
-    students: ["John", "Pete", "Alice"],
+//     students: ["John", "Pete", "Alice"],
 
-    showList: function () {
+//     showList: function () {
 
-        this.students.forEach((stu) => function (student) {
+//         this.students.forEach((stu) => function (student) {
 
-            console.log(group.title + ": " + student
+//             console.log(group.title + ": " + student
 
-            );
+//             );
 
-        }.call(this, stu));
+//         }.call(this,stu));
 
-    }
+//     }
 
-};
+// };
 
-group.showList();
+// group.showList();
 
 
 

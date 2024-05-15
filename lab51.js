@@ -15,7 +15,7 @@ function foo() {
     const f = () => { console.log(a, b) };
     baz(5, 10, f, 40, 50);
     console.log(a, b);
-}
+}   
 function bar(arg1, arg2) {
     console.log(arg1, arg2);
     a = arg1 + 40;

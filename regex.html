@@ -121,7 +121,7 @@
 <body>
     <form action="demo_form.jsp">
         Country code:
-        <input type="text" name="country_code" pattern="\$[1-9]\d{2,}\.\d{2}" title=" Three letter country code ">
+        <input type="text" name="country_code" pattern="^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$" title=" Three letter country code ">
         <input type="submit">
     </form>
 </body>

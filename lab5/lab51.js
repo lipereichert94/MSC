@@ -122,7 +122,6 @@ ex4 = {};
 
 //Method 2 using reduce and annonymus class
 console.log(students.filter(x => x.courses.includes('cs303')).reduce((x, y) => {
-
     x[y.name] = y.grades.reduce((accum, current, index, array) => accum + current / array.length, 0);
     return x;
 }, {}));
