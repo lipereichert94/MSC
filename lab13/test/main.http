@@ -1,0 +1,29 @@
+GET http://localhost:3000/books
+
+###
+GET http://localhost:3000/books/4
+
+###
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+    "title": "Calculus",
+    "ISBN": "201",
+    "publishedDate": "2030 / 12 / 12",
+    "author": "Good"
+}
+
+###
+DELETE http://localhost:3000/books/4
+
+###
+PUT http://localhost:3000/books/1
+Content-Type: application/json
+
+{
+    "title": "Math applied to Computer Science",
+    "ISBN": "Writing...",
+    "publishedDate": "2029 / 12 / 12",
+    "author": "ME"
+}

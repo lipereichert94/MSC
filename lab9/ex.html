@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        window.onload = function () {
+            
+            // let btn1 = document.getElementById("sumbutton");
+            // let result;
+            // btn1.onclick = function () {
+            //     const num1 = document.getElementById("num1").value;
+            //     const num2 = document.getElementById("num2").value;
+
+            //     result = num1 + num2;
+
+            //     console.log("Result" + (num1 + num2));
+            //     console.log("button clicked");
+            // }
+            // // btn1.addEventListener('click', function () {
+            // //     console.log('Button 2 clicked.....2');
+            // // });
+            // console.log(result);
+            document.getElementById("sumbutton")=function(e){
+                e.preventDefault();
+                console.log(document.getElementById("num1").value)
+            }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <label>Num1</label><input id="num1"></input>
+        <br></br>
+        <button id="sumbutton">Sum</button>
+        <br></br>
+        <label>Num2</label><input id="num2"></input>
+
+    </form>
+</body>
+
+</html>
